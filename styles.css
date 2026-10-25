@@ -754,3 +754,21 @@ section{padding:82px 0}
   vertical-align:baseline;
 }
 .cvpub2-entry .pubmed-button:hover{background:#f7eded;border-color:var(--cardinal)}
+
+/* Unified portrait framing for PI and lab members */
+.pi-photo, .person-headshot {
+  aspect-ratio: 4 / 5;
+  height: auto;
+  min-height: 0;
+  position: relative;
+  overflow: hidden;
+}
+.pi-photo img.lab-portrait, .person-headshot img.lab-portrait {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+}
