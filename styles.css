@@ -956,3 +956,19 @@ section{padding:82px 0}
    font-size:clamp(2rem,6vw,2.5rem);
  }
 }
+
+/* Publications: editorial type scale, aligned with the Research page. */
+.cvpub2-hero {padding:65px 0 42px;}
+.cvpub2-hero h1 {
+  font:500 clamp(2.7rem,4.2vw,4rem)/1.12 Georgia,serif;
+  letter-spacing:-.025em;
+  margin:0;
+}
+.cvpub2-entry p {
+  font-size:1.07rem;
+  line-height:1.75;
+}
+@media(max-width:650px) {
+  .cvpub2-hero {padding:45px 0 32px;}
+  .cvpub2-entry p {font-size:1rem;line-height:1.7;}
+}
