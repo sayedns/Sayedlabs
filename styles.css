@@ -790,3 +790,47 @@ section{padding:82px 0}
 .pi-feature .pi-flip .pi-photo {border:0;border-radius:12px;min-height:0;aspect-ratio:auto;}
 .pi-feature .pi-flip .flip-back {padding:2rem;}
 @media (prefers-reduced-motion:reduce) {.flip-inner {transition:none;}}
+
+/* Readable click-to-reveal back sides for all lab portraits.
+   Keeps the photograph visible until clicked; prevents browser 3D flip
+   rendering from hiding text, including on mobile and Safari. */
+.profile-flip .flip-inner,
+.profile-flip.is-flipped .flip-inner {
+  transform: none;
+  transition: none;
+}
+.profile-flip .flip-front {
+  display: block;
+}
+.profile-flip .flip-back {
+  display: none;
+  transform: none;
+  backface-visibility: visible;
+  -webkit-backface-visibility: visible;
+  z-index: 2;
+  justify-content: flex-start;
+  overflow-y: auto;
+  gap: .45rem;
+  padding: .9rem;
+}
+.profile-flip.is-flipped .flip-front {
+  display: none;
+}
+.profile-flip.is-flipped .flip-back {
+  display: flex;
+}
+.profile-flip .flip-back strong {
+  font-size: 1.05rem;
+}
+.profile-flip .flip-summary {
+  display: block;
+  font-size: .79rem;
+  line-height: 1.4;
+  overflow-y: auto;
+  min-height: 0;
+  flex: 1;
+}
+.profile-flip .flip-hint {
+  margin-top: auto;
+  flex: none;
+}
