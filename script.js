@@ -1,7 +1,7 @@
 /* Shared branding and navigation; profile-card scripts remain on people.html. */
 (() => {
   const scriptUrl = new URL(document.currentScript ? document.currentScript.src : 'script.js', document.baseURI);
-  const brandCss = new URL('site-branding.css?v=20261025-brand2', scriptUrl).href;
+  const brandCss = new URL('site-branding.css?v=20261025-brand3', scriptUrl).href;
   if (![...document.querySelectorAll('link[rel="stylesheet"]')].some(link => link.href === brandCss)) {
     const link = document.createElement('link');
     link.rel = 'stylesheet'; link.href = brandCss; document.head.appendChild(link);
