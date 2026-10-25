@@ -914,3 +914,45 @@ section{padding:82px 0}
 @media (max-width:1000px) {
   .approved-research-hero .hero-left::after { display: none; }
 }
+
+/* Unified site typography — match the refined Research landing page.
+   The Research page itself and shared brand wordmark retain their approved styles. */
+:root { --site-display-font: Georgia, "Times New Roman", serif; }
+.hero h1,
+.page-hero h1,
+.people-hero h1,
+.cvpub2-hero h1 {
+  font-family:var(--site-display-font);
+  font-size:clamp(2.1rem,3.05vw,3.05rem);
+  font-weight:500;
+  line-height:1.16;
+  letter-spacing:-.025em;
+}
+.section-title,
+.feature h2,
+.topic-section h2,
+.content-card h2 {
+  font-family:var(--site-display-font);
+  font-size:clamp(1.9rem,2.7vw,2.75rem);
+  font-weight:500;
+  line-height:1.14;
+  letter-spacing:-.02em;
+}
+.card-body h3,
+.tool h3,
+.pub h3,
+.news h3,
+.person h3 {
+  font-family:var(--site-display-font);
+  font-size:clamp(1.3rem,1.55vw,1.42rem);
+  font-weight:500;
+  line-height:1.22;
+  letter-spacing:-.01em;
+}
+.hero p,.lead,.feature p {line-height:1.75;}
+.card-body p,.tool p,.news p,.person p {line-height:1.66;}
+@media(max-width:720px) {
+ .hero h1,.page-hero h1,.people-hero h1,.cvpub2-hero h1 {
+   font-size:clamp(2rem,6vw,2.5rem);
+ }
+}
