@@ -855,3 +855,28 @@ section{padding:82px 0}
   font-size: .875rem; /* 14px */
   line-height: 1.55;
 }
+
+/* Research hero refinement: more restrained headline and image shifted left */
+@media (min-width:1001px) {
+  .approved-research-hero {
+    grid-template-columns: 43% 57%;
+  }
+  .approved-research-hero .hero-left {
+    padding-right: 1.2rem;
+  }
+  .approved-research-hero .hero-right {
+    background-position: 42% center;
+  }
+}
+.approved-research-hero h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(2.5rem, 3.8vw, 3.9rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -.025em;
+}
+@media (max-width:1000px) {
+  .approved-research-hero h1 {
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+  }
+}
