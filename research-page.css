@@ -68,3 +68,33 @@
  .research-page .r-card:hover {transform:translateY(-3px);box-shadow:0 12px 30px rgba(23,32,51,.085);}
 }
 @media (prefers-reduced-motion:reduce) { .research-page .r-card {transition:none;} }
+
+/* New organoid hero artwork. The existing image remains as a fallback until
+   assets/research_hero_new.webp is uploaded to this branch. */
+@media (min-width:721px) {
+  .research-page .r-hero {position:relative;grid-template-columns:44% 56%;isolation:isolate;}
+  .research-page .r-hero-copy {z-index:2;}
+  .research-page .r-hero-art {
+    position:absolute;inset:0 0 0 35%;height:100%;width:auto;
+    aspect-ratio:auto;background-color:var(--r-cream);
+    background-image:
+      linear-gradient(90deg,var(--r-cream) 0%,rgba(251,250,247,.88) 13%,rgba(251,250,247,.15) 35%,transparent 51%),
+      url("assets/research_hero_new.webp"),
+      url("assets/research_hero.jpg");
+    background-size:cover; background-position:center center;
+    background-repeat:no-repeat;
+  }
+  .research-page .r-hero-art::before {display:none;}
+}
+@media (max-width:720px) {
+  .research-page .r-hero-art {
+    position:relative;width:100%;height:auto;aspect-ratio:1179/537;
+    background-image:
+      linear-gradient(180deg,var(--r-cream) 0%,rgba(251,250,247,0) 16%),
+      url("assets/research_hero_new.webp"),
+      url("assets/research_hero.jpg");
+    background-size:cover;background-position:center center;
+    background-repeat:no-repeat;
+  }
+  .research-page .r-hero-art::before {display:none;}
+}
