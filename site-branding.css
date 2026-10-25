@@ -1,0 +1,30 @@
+/* Shared Sayed Lab identity. The original logo is displayed without cropping. */
+.header .brand.site-brand {
+  display:grid;grid-template-columns:54px auto;column-gap:12px;row-gap:5px;
+  align-items:center;flex-shrink:0;line-height:1;
+}
+.header .site-brand .site-logo {
+  grid-column:1;grid-row:1 / span 2;width:54px;height:auto;max-height:72px;
+  object-fit:contain;border-radius:5px;display:block;margin:0;
+}
+.header .site-brand > strong {grid-column:2;grid-row:1;align-self:end;font-size:1.75rem;}
+.header .site-brand > span {grid-column:2;grid-row:2;align-self:start;margin:0;font-size:.73rem;line-height:1.35;}
+.footer .site-footer-logo {width:74px;height:auto;object-fit:contain;border-radius:6px;margin:0 0 1rem;}
+.header .nav {gap:1.25rem;padding:12px 0;}
+.header .navlinks {gap:1.2rem;}
+.header .navlinks a[aria-current="page"] {color:var(--cardinal);text-decoration:underline;text-underline-offset:8px;}
+.header .menu-btn {cursor:pointer;min-width:44px;min-height:44px;}
+.header .brand:focus-visible,.header a:focus-visible,.menu-btn:focus-visible {outline:2px solid var(--cardinal);outline-offset:5px;}
+@media(max-width:1120px) {
+  .header .navlinks {display:none;position:absolute;top:100%;right:4vw;flex-direction:column;align-items:flex-start;gap:.8rem;background:var(--paper);padding:1.1rem;border:1px solid var(--line);border-radius:0 0 8px 8px;box-shadow:var(--shadow);min-width:200px;}
+  .header .navlinks.is-open {display:flex;}
+  .header .menu-btn {display:block;}
+}
+@media(min-width:1121px) {.header .navlinks {display:flex;}.header .menu-btn {display:none;}}
+@media(max-width:520px) {
+  .header .brand.site-brand {grid-template-columns:42px auto;column-gap:9px;}
+  .header .site-brand .site-logo {width:42px;max-height:56px;}
+  .header .site-brand > strong {font-size:1.4rem;}
+  .header .site-brand > span {font-size:.63rem;max-width:204px;}
+  .header .nav {gap:.5rem;}
+}
