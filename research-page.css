@@ -98,3 +98,45 @@
   }
   .research-page .r-hero-art::before {display:none;}
 }
+
+/* Selected Discoveries: seven compact journal-led cards in one horizontal row */
+.research-page .r-paper-grid {
+  display:grid;
+  grid-auto-flow:column;
+  grid-auto-columns:minmax(235px, 265px);
+  grid-template-columns:none;
+  gap:14px;
+  overflow-x:auto;
+  overscroll-behavior-x:contain;
+  scroll-snap-type:x proximity;
+  padding:3px 0 18px;
+  scrollbar-width:thin;
+  -webkit-overflow-scrolling:touch;
+}
+.research-page .r-paper {
+  padding:18px 17px 19px;
+  scroll-snap-align:start;
+  min-height:235px;
+}
+.research-page .r-paper .r-journal {
+  font-size:1.12rem;
+  font-weight:750;
+  line-height:1.3;
+  letter-spacing:-.01em;
+}
+.research-page .r-paper h3 {
+  font:400 .89rem/1.5 Georgia,serif;
+  margin:14px 0 17px;
+}
+.research-page .r-paper a {font-size:.81rem;}
+@media(max-width:1000px) {
+ .research-page .r-paper-grid {
+   grid-template-columns:none;
+   grid-auto-columns:minmax(225px, 265px);
+ }
+}
+@media(max-width:520px) {
+ .research-page .r-paper-grid {grid-auto-columns:minmax(220px, 80vw);}
+}
+
+.research-page .r-scroll-hint {font-size:.78rem;color:var(--r-muted);margin:1rem 0 .3rem;}
