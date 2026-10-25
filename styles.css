@@ -972,3 +972,12 @@ section{padding:82px 0}
   .cvpub2-hero {padding:45px 0 32px;}
   .cvpub2-entry p {font-size:1rem;line-height:1.7;}
 }
+
+/* Match the homepage hero typography to the approved Research page. */
+.home-approved-hero h1 {
+  font:500 clamp(2.1rem,3.05vw,3.05rem)/1.16 Georgia,serif;
+  letter-spacing:-.025em;
+}
+@media(max-width:720px) {
+ .home-approved-hero h1 {font-size:clamp(2rem,6vw,2.5rem);}
+}
