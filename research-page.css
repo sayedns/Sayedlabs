@@ -141,3 +141,17 @@
 }
 
 .research-page .r-scroll-hint {font-size:.78rem;color:var(--r-muted);margin:1rem 0 .3rem;}
+
+
+/* Bed to Bench to Bed — approved seven-stage infographic */
+.research-page .r-approach-graphic {padding-top:40px;}
+.research-page .r-graphic-sr-only {
+  position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+  clip:rect(0,0,0,0);white-space:nowrap;border:0;
+}
+.research-page .r-graphic-scroll {width:100%;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;}
+.research-page .r-journey-banner {display:block;width:100%;height:auto;max-width:none;}
+@media(max-width:760px) {
+  .research-page .r-graphic-scroll {padding-bottom:10px;}
+  .research-page .r-journey-banner {width:1080px;}
+}
