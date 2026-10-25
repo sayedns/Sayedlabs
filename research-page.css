@@ -119,13 +119,14 @@
   min-height:235px;
 }
 .research-page .r-paper .r-journal {
-  font-size:1.12rem;
-  font-weight:750;
-  line-height:1.3;
-  letter-spacing:-.01em;
+  font-family:Georgia,serif;
+  font-size:1rem;
+  font-weight:700;
+  line-height:1.45;
+  letter-spacing:0;
 }
 .research-page .r-paper h3 {
-  font:400 .89rem/1.5 Georgia,serif;
+  font:400 1rem/1.45 Georgia,serif;
   margin:14px 0 17px;
 }
 .research-page .r-paper a {font-size:.81rem;}
