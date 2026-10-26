@@ -8,7 +8,7 @@
 .platform-flip-card.is-flipped .platform-flip-inner{transform:rotateY(180deg)}
 .platform-face{position:absolute;inset:0;display:flex;flex-direction:column;overflow:hidden;border:1px solid #e8e2dc;border-radius:9px;background:#fff;backface-visibility:hidden;-webkit-backface-visibility:hidden;box-shadow:0 7px 22px rgba(23,32,51,.045)}
 .platform-back{transform:rotateY(180deg);background:#fffdfb}
-.platform-tile{display:block;flex:0 0 150px;width:100%;background-color:#f1f1ef;background-image:url("assets/platforms_flip_sprite.webp");background-size:400% 400%;background-repeat:no-repeat}
+.platform-tile{display:block;flex:0 0 150px;width:100%;background-color:#f1f1ef;background-image:url("assets/platforms_flip_sprite_crisp.webp");background-size:400% 400%;background-repeat:no-repeat}
 .tile-0,.tile-4,.tile-8,.tile-12{background-position-x:0}
 .tile-1,.tile-5,.tile-9,.tile-13{background-position-x:33.333333%}
 .tile-2,.tile-6,.tile-10,.tile-14{background-position-x:66.666667%}
@@ -28,3 +28,27 @@
 @media(max-width:1100px){.platforms-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.platform-flip-card{height:345px}}
 @media(max-width:620px){.platforms-grid{grid-template-columns:1fr;gap:18px}.platform-flip-card{height:355px}.platform-tile{flex-basis:170px}.platform-name{font-size:1.3rem}}
 @media(prefers-reduced-motion:reduce){.platform-flip-inner{transition:none}}
+
+/* Approved crisp image layout: full 2:1 panels, no cover-cropping. */
+.platforms-gallery {padding-top:22px;}
+.platforms-grid {gap:18px;}
+.platform-flip-card {height:355px;}
+.platform-tile {
+  flex:0 0 auto;
+  width:100%;
+  aspect-ratio:2/1;
+  height:auto;
+  background-color:#fff;
+  background-size:400% 400%;
+}
+.platform-copy {padding:15px 16px 17px;}
+.platform-name {font-size:1.18rem;line-height:1.2;}
+.platform-description {font-size:.89rem;line-height:1.5;}
+.platforms-instruction {margin:0 0 16px;}
+@media(max-width:1100px) {
+  .platform-flip-card {height:365px;}
+}
+@media(max-width:620px) {
+  .platform-flip-card {height:380px;}
+  .platform-tile {flex-basis:auto;}
+}
