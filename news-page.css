@@ -83,3 +83,35 @@
 .lab-news .news-year-heading span{color:var(--muted);font-size:.88rem;}
 .lab-news .news-story{display:flex;flex-direction:column;}
 .lab-news .news-story h3{font-size:1.27rem;line-height:1.27;}
+
+/* Compact single-column, date-led 2026 achievements */
+.lab-news .news-achievements .container{max-width:1000px}
+.lab-news .news-achievements .news-card-grid{
+  display:grid;grid-template-columns:minmax(0,1fr);gap:10px;
+}
+.lab-news .news-achievements .news-year-heading{margin-bottom:18px}
+.lab-news .news-achievements .news-story{
+  display:grid;grid-template-columns:78px minmax(0,1fr);
+  align-items:center;gap:19px;min-height:0;padding:16px 20px;
+  border-radius:9px;box-shadow:none;
+}
+.lab-news .news-story-date{
+  display:flex;flex-direction:column;justify-content:center;align-items:flex-start;
+  gap:2px;border-right:1px solid var(--line);align-self:stretch;
+  color:var(--ink);font-weight:750;font-size:.87rem;letter-spacing:.04em;
+}
+.lab-news .news-story-date small{font-size:.78rem;font-weight:400;color:var(--muted)}
+.lab-news .news-achievements .news-story .news-meta{
+  font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;line-height:1.3;
+}
+.lab-news .news-achievements .news-story h3{
+  font:500 1.05rem/1.3 Georgia,serif;margin:5px 0 4px;
+}
+.lab-news .news-achievements .news-story p{
+  font-size:.84rem;line-height:1.48;margin:0;
+}
+@media(max-width:620px){
+ .lab-news .news-achievements .news-story{grid-template-columns:57px minmax(0,1fr);gap:12px;padding:13px 12px}
+ .lab-news .news-achievements .news-story h3{font-size:1rem}
+ .lab-news .news-achievements .news-story p{font-size:.8rem}
+}
