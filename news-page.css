@@ -71,3 +71,15 @@
 @media(max-width:900px){
  .lab-news .news-feature-visual{padding:16px;}
 }
+
+/* Year-organized Lab News & Achievements */
+.lab-news .news-year-heading{
+  display:flex;align-items:baseline;gap:16px;margin:0 0 24px;
+  padding-bottom:12px;border-bottom:2px solid var(--ink);
+}
+.lab-news .news-year-heading h3{
+  font:500 clamp(2rem,3vw,2.7rem)/1.1 Georgia,serif;margin:0;
+}
+.lab-news .news-year-heading span{color:var(--muted);font-size:.88rem;}
+.lab-news .news-story{display:flex;flex-direction:column;}
+.lab-news .news-story h3{font-size:1.27rem;line-height:1.27;}
