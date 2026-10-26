@@ -23,3 +23,25 @@
 .lab-news .news-photo-icon{font-size:2.1rem;color:#9a9ea4;line-height:1}
 @media(max-width:900px){.lab-news .news-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.lab-news .news-feature{grid-template-columns:1fr}.lab-news .news-feature-visual{min-height:240px}}
 @media(max-width:620px){.lab-news .news-section{padding:45px 0}.lab-news .news-card-grid,.lab-news .news-photo-grid{grid-template-columns:1fr}.lab-news .news-story{min-height:0}.lab-news .news-photo-placeholder{min-height:180px}.lab-news .news-page-hero{padding:48px 0 34px}}
+
+/* Featured publication: preserve the full graphical abstract, without cropping. */
+.lab-news .news-feature-visual{
+  background:#fff;
+  padding:18px;
+  min-height:330px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.lab-news .news-feature-visual img{
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:520px;
+  object-fit:contain;
+  object-position:center;
+}
+@media(max-width:900px){
+ .lab-news .news-feature-visual{min-height:0;padding:16px;}
+ .lab-news .news-feature-visual img{max-height:none;}
+}
