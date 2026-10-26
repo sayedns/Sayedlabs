@@ -45,3 +45,29 @@
  .lab-news .news-feature-visual{min-height:0;padding:16px;}
  .lab-news .news-feature-visual img{max-height:none;}
 }
+
+/* Featured News: journal title left-aligned with the graphical abstract. */
+.lab-news .news-feature-visual{
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  justify-content:flex-start;
+  gap:12px;
+  padding:20px;
+}
+.lab-news .news-feature-visual .news-journal-heading{
+  font:700 clamp(1.35rem,2.1vw,1.9rem)/1.15 Georgia,"Times New Roman",serif;
+  color:var(--cardinal);
+  margin:0;
+  text-align:left;
+}
+.lab-news .news-feature-visual img{
+  width:100%;
+  max-height:none;
+  height:auto;
+  object-fit:contain;
+  object-position:top left;
+}
+@media(max-width:900px){
+ .lab-news .news-feature-visual{padding:16px;}
+}
