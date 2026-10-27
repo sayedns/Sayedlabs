@@ -981,3 +981,8 @@ section{padding:82px 0}
 @media(max-width:720px) {
  .home-approved-hero h1 {font-size:clamp(2rem,6vw,2.5rem);}
 }
+
+/* Brighten only Safa Sadat's uploaded PNG portrait without changing any other headshots. */
+.people-grid .person-headshot img.lab-portrait[alt="Safa Sadat"] {
+  filter: brightness(1.24) contrast(1.04);
+}
