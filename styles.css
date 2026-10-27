@@ -986,3 +986,12 @@ section{padding:82px 0}
 .people-grid .person-headshot img.lab-portrait[alt="Safa Sadat"] {
   filter: brightness(1.24) contrast(1.04);
 }
+
+/* Safa portrait only: closer crop while retaining the original uploaded JPEG. */
+.people-grid .person-headshot img.lab-portrait[alt="Safa Sadat"] {
+  object-fit:cover;
+  object-position:center 35%;
+  transform:scale(1.12);
+  transform-origin:center 35%;
+  filter:brightness(1.24) contrast(1.04);
+}
