@@ -197,3 +197,22 @@
    background:linear-gradient(180deg,#f8fbff 0%,rgba(248,251,255,.99) 27%,rgba(248,251,255,.86) 44%,rgba(248,251,255,.12) 74%,rgba(248,251,255,0) 94%);
  }
 }
+
+/* Final hero adjustment: retain full-height NAMs graphic; protect headline and copy. */
+.platforms-split-hero::before{
+  background:linear-gradient(90deg,
+    #f8fbff 0%,
+    rgba(248,251,255,.99) 19%,
+    rgba(248,251,255,.97) 30%,
+    rgba(248,251,255,.86) 39%,
+    rgba(248,251,255,.61) 48%,
+    rgba(248,251,255,.2) 59%,
+    rgba(248,251,255,0) 73%);
+}
+.platforms-hero-copy{width:min(61%,900px);}
+@media(max-width:850px){
+ .platforms-hero-copy{width:100%;}
+ .platforms-split-hero::before{
+   background:linear-gradient(180deg,#f8fbff 0%,rgba(248,251,255,.99) 31%,rgba(248,251,255,.9) 46%,rgba(248,251,255,.18) 74%,rgba(248,251,255,0) 94%);
+ }
+}
