@@ -224,3 +224,22 @@
    left:-7%;
  }
 }
+
+/* Clean, text-led Platforms hero: remove the NAMs image and all overlay effects. */
+.platforms-split-hero{
+  display:block;min-height:0;isolation:auto;
+  background:#fbfaf7;padding:0;overflow:visible;
+}
+.platforms-split-hero::before{content:none;display:none;}
+.platforms-hero-copy{
+  width:min(100%,1180px);min-height:0;
+  margin:0 auto;
+  padding:clamp(48px,6vw,90px) clamp(24px,4vw,56px);
+}
+.platforms-hero-copy h1{font-size:clamp(2.35rem,3.7vw,4rem);}
+.platforms-hero-copy h2,.platforms-hero-copy p{max-width:850px;}
+@media(max-width:850px){
+ .platforms-split-hero{min-height:0;}
+ .platforms-hero-copy{width:100%;min-height:0;padding:48px 26px;}
+ .platforms-split-hero::before{content:none;display:none;}
+}
