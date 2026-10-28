@@ -216,3 +216,11 @@
    background:linear-gradient(180deg,#f8fbff 0%,rgba(248,251,255,.99) 31%,rgba(248,251,255,.9) 46%,rgba(248,251,255,.18) 74%,rgba(248,251,255,0) 94%);
  }
 }
+
+/* Shift the existing full-height NAMs image toward the text without resizing it. */
+@media(min-width:851px){
+ .platforms-hero-visual img{
+   position:relative;
+   left:-7%;
+ }
+}
