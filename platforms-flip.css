@@ -133,3 +133,34 @@
   background:linear-gradient(180deg,#f8fbff 0%,rgba(248,251,255,.98) 22%,rgba(248,251,255,.92) 38%,rgba(248,251,255,.2) 66%,rgba(248,251,255,0) 85%);
  }
 }
+
+/* Reduce the NAMs artwork scale while preserving its soft fade behind the text. */
+.platforms-hero-visual{
+  background:#061423;
+}
+.platforms-hero-visual img{
+  width:66%;
+  height:90%;
+  max-height:560px;
+  margin-left:auto;
+  margin-right:2%;
+  object-fit:contain;
+  object-position:center;
+}
+.platforms-split-hero::before{
+  background:linear-gradient(90deg,
+    #f8fbff 0%,rgba(248,251,255,.99) 27%,
+    rgba(248,251,255,.94) 40%,
+    rgba(248,251,255,.65) 51%,
+    rgba(248,251,255,.12) 64%,
+    rgba(248,251,255,0) 77%);
+}
+@media(max-width:850px){
+ .platforms-hero-visual img{
+   width:88%;height:55%;max-height:none;
+   margin:280px auto 0;object-fit:contain;
+ }
+ .platforms-split-hero::before{
+   background:linear-gradient(180deg,#f8fbff 0%,rgba(248,251,255,.99) 29%,rgba(248,251,255,.9) 44%,rgba(248,251,255,.18) 70%,rgba(248,251,255,0) 90%);
+ }
+}
