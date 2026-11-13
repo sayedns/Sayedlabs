@@ -996,7 +996,7 @@ section{padding:82px 0}
   filter:brightness(1.24) contrast(1.04);
 }
 
-/* Publications — publisher cover gallery using the lab's uploaded image files. */
+/* Publications — all eight uploaded journal covers visible together. */
 .pub-cover-section{
   padding:34px 0 42px;
   background:#fbfaf7;
@@ -1008,42 +1008,44 @@ section{padding:82px 0}
   margin:0 0 24px;
 }
 .pub-cover-gallery{
-  display:flex;
+  display:grid;
+  grid-template-columns:repeat(8,minmax(0,1fr));
   align-items:center;
-  gap:clamp(18px,2.4vw,30px);
-  overflow-x:auto;
-  overscroll-behavior-x:contain;
-  scroll-snap-type:x proximity;
-  scrollbar-width:thin;
-  padding:8px 3px 20px;
-  -webkit-overflow-scrolling:touch;
+  gap:clamp(8px,1vw,14px);
+  overflow:visible;
+  padding:8px 2px 14px;
 }
 .pub-cover-gallery:focus-visible{
   outline:2px solid var(--cardinal);
   outline-offset:3px;
 }
 .pub-cover-item{
-  flex:0 0 auto;
-  display:block;
-  scroll-snap-align:start;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-width:0;
   line-height:0;
   transition:transform .2s ease;
 }
 .pub-cover-item img{
   display:block;
-  width:auto;
-  height:clamp(220px,23vw,275px);
-  max-width:min(210px,55vw);
+  width:100%;
+  height:clamp(130px,16vw,185px);
+  max-width:100%;
   object-fit:contain;
-  box-shadow:0 5px 18px rgba(26,35,48,.16);
+  box-shadow:0 4px 12px rgba(26,35,48,.14);
   background:#fff;
 }
 .pub-cover-item:hover{transform:translateY(-4px);}
 .pub-cover-item:focus-visible{outline:2px solid var(--cardinal);outline-offset:5px;}
-@media(max-width:650px){
+@media(max-width:900px){
+  .pub-cover-gallery{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;}
+  .pub-cover-item img{height:220px;}
+}
+@media(max-width:500px){
   .pub-cover-section{padding:26px 0 30px;}
   .pub-cover-section h2{margin-bottom:18px;}
-  .pub-cover-gallery{gap:16px;padding-bottom:18px;}
-  .pub-cover-item img{height:220px;max-width:170px;}
+  .pub-cover-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 14px;}
+  .pub-cover-item img{height:210px;}
 }
 @media(prefers-reduced-motion:reduce){.pub-cover-item{transition:none;}}
