@@ -996,7 +996,7 @@ section{padding:82px 0}
   filter:brightness(1.24) contrast(1.04);
 }
 
-/* Publications — all thirteen uploaded journal covers visible together. */
+/* Publications — all seventeen uploaded journal covers visible together, in two balanced desktop rows. */
 .pub-cover-section{
   padding:34px 0 42px;
   background:#fbfaf7;
@@ -1009,12 +1009,14 @@ section{padding:82px 0}
 }
 .pub-cover-gallery{
   display:grid;
-  grid-template-columns:repeat(13,minmax(0,1fr));
+  grid-template-columns:repeat(9,minmax(0,1fr));
   align-items:start;
   gap:clamp(8px,1vw,14px);
   overflow:visible;
   padding:0;
 }
+/* Center the eight covers in the second desktop row. */
+.pub-cover-gallery > .pub-cover-item:nth-child(10){grid-column:2;}
 .pub-cover-gallery:focus-visible{
   outline:2px solid var(--cardinal);
   outline-offset:3px;
@@ -1040,6 +1042,7 @@ section{padding:82px 0}
 .pub-cover-item:focus-visible{outline:2px solid var(--cardinal);outline-offset:5px;}
 @media(max-width:900px){
   .pub-cover-gallery{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;}
+  .pub-cover-gallery > .pub-cover-item:nth-child(10){grid-column:auto;}
 }
 @media(max-width:500px){
   .pub-cover-section{padding:26px 0 30px;}
